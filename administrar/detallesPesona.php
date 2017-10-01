@@ -104,7 +104,7 @@ if ($_GET) {
         <?php
         if (isset($_GET["nit"]) and isset($_GET["razon"])) {
             $vinculo =strtoupper($persona["vinculo"]);
-            $tipo =strtoupper($persona["tipoPersona"]);
+            $tipo =strtoupper($persona["tipopersona"]);
             echo "$('#cbVinculo').val('$vinculo').change();\n";
             echo "$('#cbPersona').val('$tipo').change();";
         }

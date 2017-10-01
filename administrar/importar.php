@@ -8,10 +8,11 @@ if (!isset($_SESSION['usuario'])) {
 }
 ?>
 <!DOCTYPE html>
+
 <html>
     <head>
-        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <title>SCP | documentos</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -27,6 +28,9 @@ if (!isset($_SESSION['usuario'])) {
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../recursos/app/css/skins/_all-skins.min.css">
+        <style type="text/css">
+            .scroll-wrapper { height: 500px; overflow: auto; }
+        </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -86,6 +90,7 @@ if (!isset($_SESSION['usuario'])) {
                                                 <div class="form-group">
                                                     <label id="lbTipoDocumento" for="cbTipoDocumento">Tipo de documento</label>
                                                     <select  class="form-control" id="cbTipoDocumento" required>
+                                                        <option disabled selected value> -- Seleccione una opcion -- </option>
                                                         <option value="Orden de comprobante de pago">Orden de comprobante de pago</option>
                                                         <option value="Informe de contraloria">Informe de contraloria</option>
                                                     </select>
@@ -110,10 +115,10 @@ if (!isset($_SESSION['usuario'])) {
                                     <div class="box-footer">
                                         <a href="javascript:void(0)" type="submit" class="btn btn-primary" id="btnAgregar">
                                             <span class="glyphicon glyphicon-plus"></span>Agregar</a>
-                                        <a href="javascript:void(0)" class="btn btn-danger" id="btnLimpiar"> 
+                                        <a href="javascript:void(0)" class="btn btn-danger" id="btnLimpiar">
                                             <span class="glyphicon glyphicon-trash"></span>
                                             Limpiar</a>
-                                        <a href="javascript:void(0)" class="btn btn-primary pull-right" id="btnRegistrar"> 
+                                        <a href="javascript:void(0)" class="btn btn-primary pull-right" id="btnRegistrar">
                                             <span class="glyphicon glyphicon-ok"></span> Registrar</a>
 
                                     </div>
@@ -121,7 +126,7 @@ if (!isset($_SESSION['usuario'])) {
                             </div>
                             <!-- /.box -->
                         </div>
-                    </div>   
+                    </div>
 
 
                 </section>

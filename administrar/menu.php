@@ -1,5 +1,4 @@
- <?php 
-
+ <?php
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -8,7 +7,7 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 $data=$_SESSION['usuario'];
-$url = '/ControlPolizas';
+$url = '';
 $polizas =$_SESSION['notificacion'];
 $cantidad= count($polizas);
  ?>

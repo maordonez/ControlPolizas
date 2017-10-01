@@ -38,6 +38,13 @@ $cantidad = count($polizas);
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../recursos/app/css/skins/_all-skins.min.css">
+        <style type="text/css">
+            .scroll-wrapper { height: 500px; overflow: auto; }
+            .evento{
+                width: 300px;
+                overflow: auto;
+            }
+        </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,6 +52,7 @@ $cantidad = count($polizas);
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
     </head>
     <body class="hold-transition skin-red-light sidebar-mini sidebar-collapse">
         <div class="wrapper">
@@ -80,30 +88,31 @@ $cantidad = count($polizas);
                                     </div>
                                 </div>
                                 <!-- /.box-header -->
-                                <div class="box-body table-responsive no-padding">
-                                    <table class="table table-hover">
-                                        <tbody>
-                                            <tr>
-                                                <th>Contrato</th>
-                                                <th>Tipo Contrato</th>
-                                                <th>Fecha Suscripcion</th>
-                                                <th>Fecha Inicio</th>
-                                                <th>Fecha Fin</th>
-                                                <th>Vence en</th>
-                                                <th></th>
-                                            </tr>
-                                            <?php foreach ($polizas as $p) { ?>
-                                                <tr>
-                                                    <td><?php echo $p["idContrato"]; ?></td>
-                                                    <td><?php echo $p["TipoContrato"]; ?></td>
-                                                    <td><?php echo $p["fechaSuscripcion"]; ?></td>
-                                                    <td><?php echo $p["fechaInicio"]; ?></td>
-                                                    <td><?php echo $p["fechaFin"]; ?></td>
-                                                    <td><?php echo "$p[dias] dias"; ?></td>
-                                                    <td><button id="btnBuscar_<?php echo $p["idContrato"]; ?>" type="button" class="btn btn-default btnBusqueda"><i class="glyphicon glyphicon-search"></i></button> </td>
-                                                </tr>
-                                            <?php } ?>
-                                        </tbody></table>
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive scroll-wrapper">
+                                                <table  class="table table-hover">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>Contrato</th>
+                                                        <th>Objeto de Contrato</th>
+                                                        <th class="evento">Evento</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <?php foreach ($polizas as $p) { ?>
+                                                        <tr>
+                                                            <td><?php echo $p["idContrato"]; ?></td>
+                                                            <td><?php echo $p["objetoContrato"]; ?></td>
+                                                            <td><?php echo $p["valor"]; ?></td>
+                                                            <td><button id="btnBuscar_<?php echo $p["idContrato"]; ?>" type="button" class="btn btn-default btnBusqueda"><i class="glyphicon glyphicon-search"></i></button> </td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                    </tbody></table>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <!-- /.box-body -->
                             </div>

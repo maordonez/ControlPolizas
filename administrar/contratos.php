@@ -28,6 +28,10 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../recursos/app/css/skins/_all-skins.min.css">
+        <style type="text/css">
+            .scroll-wrapper { height: 500px; overflow: auto; }
+            .scroll-wrapper1 { height: 200px; overflow: auto; }
+        </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,11 +42,9 @@
     </head>
     <body class="hold-transition skin-red-light sidebar-mini sidebar-collapse">
         <div class="wrapper">
-
             <?php include './header.php'; ?>
             <!-- Left side column. contains the logo and sidebar -->
             <?php include './menu.php'; ?>
-
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
@@ -80,7 +82,7 @@
                                     <div class="row">
                                         <div class="col-md-8">
 
-                                            <div class="table-responsive">
+                                            <div class="table-responsive scroll-wrapper1">
                                                 <table class="table table-sm table-hover"> 
                                                     <tbody id="filtros">
                                                         <tr>
@@ -127,7 +129,7 @@
                                 <div id="listadoContratos" class="box-body">    
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="table-responsive no-padding">
+                                            <div class="table-responsive no-padding scroll-wrapper">
                                                 <table id="append-example" class="table table-hover">
                                                     <thead>
                                                     <th>#</th>

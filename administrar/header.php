@@ -9,8 +9,7 @@ if (!isset($_SESSION['usuario'])) {
 $data=$_SESSION['usuario'];
 $polizas =$_SESSION['notificacion'];
 $cantidad= count($polizas);
-//print_r($data);
-$url = '/ControlPolizas';
+$url = '';
 ?>
 <header class="main-header">
 
@@ -46,7 +45,7 @@ $url = '/ControlPolizas';
                                 <?php foreach ($polizas as $p){?>
                                 <li>
                                     <a href="#">
-                                        <i class="glyphicon glyphicon-list"></i><?php echo "$p[TipoContrato] - $p[idContrato] - $p[dias] dias restantes"; ?>
+                                        <i class="glyphicon glyphicon-list"></i><?php echo "$p[idContrato]"; ?>
                                     </a>
                                 </li>
                                 <?php }?>

@@ -126,11 +126,10 @@ $planGobierno = $anexos["planGobierno"];
                                     <label for="fechaSuscripcion">Fecha Suscripcion</label>
 
                                     <div class="input-group date">
-                                        <div class="input-group-addon">
+                                        <div id="pruebaBtn" class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input name="fechaSuscripcion" type="text"
-                                               class="datepickerCustom form-control pull-right" id="fechaSuscripcion">
+                                        <input data-date-format='yyyy-mm-dd' name="fechaSuscripcion" type="text" class="datepickerCustom form-control pull-right" id="fechaSuscripcion">
                                     </div>
                                     <!-- /.input group -->
                                 </div>
@@ -144,7 +143,7 @@ $planGobierno = $anexos["planGobierno"];
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input name="fechaInicio" type="text"
+                                        <input data-date-format='yyyy-mm-dd' name="fechaInicio" type="text"
                                                class="datepickerCustom form-control pull-right" id="fechaInicio">
                                     </div>
                                     <!-- /.input group -->
@@ -159,7 +158,7 @@ $planGobierno = $anexos["planGobierno"];
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input name="fechaFin" type="text"
+                                        <input data-date-format='yyyy-mm-dd' name="fechaFin" type="text"
                                                class="datepickerCustom form-control pull-right"
                                                id="fechaFin">
                                     </div>
@@ -284,7 +283,7 @@ $planGobierno = $anexos["planGobierno"];
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input name="fechaCompromiso" type="text"
+                                        <input data-date-format='yyyy-mm-dd' name="fechaCompromiso" type="text"
                                                class="datepickerCustom form-control pull-right" id="fechaCompromiso">
                                     </div>
                                     <!-- /.input group -->
@@ -317,7 +316,7 @@ $planGobierno = $anexos["planGobierno"];
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input name="fechaCompromiso2" type="text"
+                                        <input data-date-format='yyyy-mm-dd' name="fechaCompromiso2" type="text"
                                                class="datepickerCustom form-control pull-right" id="fechaCompromiso2">
                                     </div>
                                     <!-- /.input group -->
@@ -387,7 +386,7 @@ $planGobierno = $anexos["planGobierno"];
                     </div>
                     <div class="form-group">
                         <label for="fechaEgreso">Fecha Egreso</label>
-                        <input name="fecha" type="text" class="form-control datepickerCustom" id="fechaEgreso">
+                        <input data-date-format='yyyy-mm-dd' name="fecha" type="text" class="form-control datepickerCustom" id="fechaEgreso">
                     </div>
                     <div class="form-group">
                         <label for="valorEgreso">Valor Egreso</label>
@@ -457,8 +456,8 @@ $planGobierno = $anexos["planGobierno"];
         //Date picker
         $('.datepickerCustom').datepicker({
             autoclose: true,
-            dateFormat: "mm-dd-yy"
         });
+
         function formatDate(str1) {
 // str1 format should be yyyy/mm/dd. Separator can be anything e.g. / or -. It wont effect
             var yr1 = parseInt(str1.substring(0, 4));
